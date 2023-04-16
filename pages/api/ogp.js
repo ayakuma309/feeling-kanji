@@ -13,7 +13,9 @@ const createOgp = async (
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
   // フォントのロード
-  const font = await loadImage('./fonts/NotoSansJP-Regular.ttf');
+  const font = path.resolve(`../../fonts/NotoSansJP-Regular.ttf`)
+  registerFont(font, { family: NotoSansJP-Regular })
+  // const font = await loadImage('./fonts/NotoSansJP-Regular.ttf');
   ctx.font = "60px NotoSansJP-Regular";
   ctx.fillStyle = "#000000";
   ctx.textAlign = "center";
