@@ -26,9 +26,12 @@ const Page = ({ id, meaning, description }) => {
       <Head>
         <title>あの人の感じはどんな漢字</title>
         <meta charset="utf-8" />
-        <meta name="og:title" property="og:title" content={
-          `${id}`} />
-        <meta name="description" content="感じ(漢字)を送ろう" />
+        {id &&(
+          <meta name="og:title" property="og:title" content={`${meaning}`} />
+        )}
+        {id &&(
+          <meta name="description" content={`${description}`} />
+        )}
         {id && (<meta name="og:url" property="og:url" content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`} />
         )}
         {id && (
