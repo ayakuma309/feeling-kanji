@@ -11,7 +11,10 @@ const createOgp = async (
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = "#FFF";
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
-  ctx.font = "60px ipagp";
+
+  // フォントのロード
+  const font = await loadImage('./fonts/NotoSansJP-Regular.ttf');
+  ctx.font = "60px NotoSansJP-Regular";
   ctx.fillStyle = "#000000";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
