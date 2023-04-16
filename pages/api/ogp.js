@@ -18,8 +18,11 @@ const createOgp = async (
   ctx.fillStyle = "#000000";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  const text_title = "入力した文字は" + String(title) + "なのねん";
-  ctx.fillText(text_title, WIDTH / 2, HEIGHT / 2);
+  const text_title = "入力した文字は" + String(title);
+  //ctx.measureText() でテキストの幅を計測し、canvas の幅からテキストの幅を引いた値を x 座標に設定
+  const textMetrics = ctx.measureText(text_title);
+  const textWidth = textMetrics.width;
+  ctx.fillText(text_title, (WIDTH - textWidth) / 2, HEIGHT / 2);
   const buffer = canvas.toBuffer();
   res.writeHead(200, {
     "Content-Type": "image/png",
