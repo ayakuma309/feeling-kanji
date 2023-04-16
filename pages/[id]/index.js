@@ -32,13 +32,13 @@ const Page = ({ id, meaning, description }) => {
         {id &&(
           <meta name="description" content={`${description}`} />
         )}
-        {id && (<meta name="og:url" property="og:url" content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`} />
+        {id && (<meta name="og:url" property="og:url" content={`${baseUrl}/api/ogp?id=${id}`} />
         )}
         {id && (
           <meta
             property="og:image"
             key="ogImage"
-            content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`}
+            content={`${baseUrl}/api/ogp?id=${id}`}
           />
         )}
         {id && (
@@ -49,7 +49,7 @@ const Page = ({ id, meaning, description }) => {
           />
         )}
         {id && (
-          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?id=${encodeURIComponent(id)}&meaning=${encodeURIComponent(meaning)}&description=${encodeURIComponent(description)}`} />
+          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?id=${encodeURIComponent(id)}`} />
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>
