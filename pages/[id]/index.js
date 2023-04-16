@@ -24,6 +24,12 @@ const Page = ({ id, meaning, description }) => {
   return (
     <>
       <Head>
+        <title>あの人の感じはどんな漢字</title>
+        <meta name="og:title" property="og:title" content={
+          `${id}`} />
+        <meta name="description" content="感じ(漢字)を送ろう" />
+        {id && (<meta name="og:url" property="og:url" content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`} />
+        )}
         {id && (
           <meta
             property="og:image"
@@ -45,6 +51,7 @@ const Page = ({ id, meaning, description }) => {
             content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`}
           />
         )}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
