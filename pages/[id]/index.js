@@ -1,13 +1,15 @@
 import React from "react";
 import Head from "next/head";
 
-export const getServerSideProps = async (
-  context
-) => {
-  if (typeof context.params?.id === "string") {
+export const getServerSideProps = async (context) => {
+  const { id } = context.params || {};
+  const { meaning, description } = context.query || {};
+  if (typeof id === "string") {
     return {
       props: {
-        id: context.params?.id,
+        id: id || null,
+        meaning: meaning || "",
+        description: description || "",
       },
     };
   } else {
@@ -17,29 +19,37 @@ export const getServerSideProps = async (
   }
 };
 
-const Page = ({ id }) => {
+const Page = ({ id, meaning, description }) => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "";
   return (
     <>
       <Head>
-        <meta
-          property="og:image"
-          key="ogImage"
-          content={`${baseUrl}/api/ogp?id=${id}`}
-        />
-        <meta
-          name="twitter:card"
-          key="twitterCard"
-          content="summary_large_image"
-        />
-        <meta
-          name="twitter:image"
-          key="twitterImage"
-          content={`${baseUrl}/api/ogp?id=${id}`}
-        />
+        {id && (
+          <meta
+            property="og:image"
+            key="ogImage"
+            content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`}
+          />
+        )}
+        {id && (
+          <meta
+            name="twitter:card"
+            key="twitterCard"
+            content="summary_large_image"
+          />
+        )}
+        {id && (
+          <meta
+            name="twitter:image"
+            key="twitterImage"
+            content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`}
+          />
+        )}
       </Head>
       <div>
-        <h1>入力した文字: {id}</h1>
+        <h1>入力した文字: {id || "未入力"}</h1>
+        <h1>入力した意味: {meaning || "未入力"}</h1>
+        <h1>入力した説明: {description || "未入力"}</h1>
       </div>
     </>
   );
