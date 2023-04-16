@@ -47,9 +47,11 @@ const Page = ({ id, meaning, description }) => {
         )}
       </Head>
       <div>
-        <h1>入力した文字: {id || "未入力"}</h1>
-        <h1>入力した意味: {meaning || "未入力"}</h1>
-        <h1>入力した説明: {description || "未入力"}</h1>
+        <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <h1>入力した文字: {id || "未入力"}</h1>
+          <h1>入力した意味: {meaning || "未入力"}</h1>
+          <h1>入力した説明: {description || "未入力"}</h1>
+        </div>
       </div>
     </>
   );
