@@ -25,6 +25,7 @@ const Page = ({ id, meaning, description }) => {
     <>
       <Head>
         <title>あの人の感じはどんな漢字</title>
+        <meta charset="utf-8" />
         <meta name="og:title" property="og:title" content={
           `${id}`} />
         <meta name="description" content="感じ(漢字)を送ろう" />
@@ -45,11 +46,7 @@ const Page = ({ id, meaning, description }) => {
           />
         )}
         {id && (
-          <meta
-            name="twitter:image"
-            key="twitterImage"
-            content={`${baseUrl}/api/ogp?id=${id}&meaning=${meaning}&description=${description}`}
-          />
+          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?id=${encodeURIComponent(id)}&meaning=${encodeURIComponent(meaning)}&description=${encodeURIComponent(description)}`} />
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>
