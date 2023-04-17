@@ -49,7 +49,7 @@ const Page = ({ id, meaning, description }) => {
           />
         )}
         {id && (
-          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?id=${encodeURIComponent(id)}`} />
+          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?id=${id}`} />
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>

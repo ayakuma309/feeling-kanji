@@ -4,7 +4,7 @@ const createOgp = async (
   req,
   res
 ) => {
-  const { title } = req.query;
+  const { id } = req.query;
   const WIDTH = 1200 ;
   const HEIGHT = 630 ;
   const canvas = createCanvas(WIDTH, HEIGHT);
@@ -13,14 +13,14 @@ const createOgp = async (
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
   // フォントのロード
-  const font = path.resolve(`../../fonts/NotoSansJP-Regular.ttf`)
-  registerFont(font, { family: NotoSansJP-Regular })
-  // const font = await loadImage('./fonts/NotoSansJP-Regular.ttf');
-  ctx.font = "60px NotoSansJP-Regular";
+  registerFont(path.resolve('./fonts/NotoSansJP-Regular.otf'), {
+    family: 'Noto',
+  });
+  ctx.font = '60px "Noto"';
   ctx.fillStyle = "#000000";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  const text_title = "入力した文字は" + String(title);
+  const text_title = "入力した文字は" + String(id);
   //ctx.measureText() でテキストの幅を計測し、canvas の幅からテキストの幅を引いた値を x 座標に設定
   const textMetrics = ctx.measureText(text_title);
   const textWidth = textMetrics.width;
