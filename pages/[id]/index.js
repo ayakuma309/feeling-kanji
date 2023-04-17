@@ -38,7 +38,7 @@ const Page = ({ title, meaning, description }) => {
           <meta
             property="og:image"
             key="ogImage"
-            content={`${baseUrl}/api/ogp?id=${title}`}
+            content={`${baseUrl}/api/ogp?title=${title}`}
           />
         )}
         {title && (
@@ -49,7 +49,7 @@ const Page = ({ title, meaning, description }) => {
           />
         )}
         {title && (
-          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?id=${title}`} />
+          <meta name="twitter:image" key="twitterImage" content={`${baseUrl}/api/ogp?title=${title}`} />
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>
