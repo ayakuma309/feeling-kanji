@@ -9,12 +9,6 @@ const Home = () => {
   const inputTitle = (e) => {
     setTitle(e.target.value);
   };
-  const inputMeaning = (e) => {
-    setMeaning(e.target.value);
-  };
-  const inputDescription = (e) => {
-    setDescription(e.target.value);
-  };
 
   const query = {
     title: title,
@@ -33,7 +27,7 @@ const Home = () => {
         onChange={inputTitle}
       />
         {title?.trim() && (
-          <Link href={{ pathname: `/${title}`, query }}>
+          <Link href={`/${text}`}>
             OGPを作成する
           </Link>
         )}
