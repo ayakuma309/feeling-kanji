@@ -32,21 +32,6 @@ const Home = () => {
         placeholder="元明笑癒"
         onChange={inputTitle}
       />
-      <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-        id="meaning"
-        type="text"
-        placeholder="トリッキーさん"
-        onChange={inputMeaning}
-      />
-      <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-        id="description"
-        type="text"
-        placeholder="いつも元気で明るく笑顔だし癒しだから"
-        onChange={inputDescription}
-      />
-
         {title?.trim() && (
           <Link href={{ pathname: `/${title}`, query }}>
             OGPを作成する
