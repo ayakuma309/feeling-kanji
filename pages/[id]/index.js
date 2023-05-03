@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { TwitterShareButton } from "react-share";
@@ -19,6 +19,7 @@ export const getServerSideProps = async (context) => {
 const Page = ({ id }) => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "";
   const encodedUrl = encodeURI(`${baseUrl}/${id}`);
+  const [toWhom, setToWhom] = useState("");
   return (
     <>
       <Head>
@@ -56,9 +57,17 @@ const Page = ({ id }) => {
         <div className="text">
           <div className="text-content">{id|| "未入力"}</div>
         </div>
-
+        <form>
+          <label>誰に送りたいですか?(自分でも)</label><br/>
+          <input
+            type="text"
+            placeholder="〇〇さんへ"
+            onChange={(e) => setToWhom(e.target.value)}
+            className="shadow appearance-none border rounded  md:w-80 py-5 px-5 my-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </form>
         <TwitterShareButton
-          title="あの人の感じはどんな漢字"
+          title={toWhom || "あの人の感じはどんな漢字"}
           hashtags={["あの人の感じはどんな漢字", "他己分析"]}
           related={["ZCunkuma"]}
           url={encodedUrl}

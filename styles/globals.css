@@ -65,11 +65,11 @@
 @media (max-width: 768px) {
   /* 768px以上用のスタイル */
   .text{
-    width: 80%;
-    font-size: 50px;
+    width: 90%;
+    font-size: 40px;
   }
   .text-content{
-    padding: 60px;
-    line-height: 3;
+    padding: 30px;
+    line-height: 4.5;
   }
 }
