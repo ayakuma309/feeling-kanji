@@ -78,7 +78,7 @@ const Home = () => {
             message: '漢字のみ入力してください。',
           },
           })}
-          className="shadow appearance-none border rounded w-80 py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded  md:w-80 py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-5 px-5">
           作成
