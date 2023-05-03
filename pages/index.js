@@ -67,7 +67,7 @@ const Home = () => {
         <input
           type="text"
           id="title"
-          placeholder="元明笑癒"
+          placeholder="4文字の漢字(例: 尊憧優愛)"
           onChange={inputTitle}
           {...register("title",{
           required: { value: true, message: "入力は必須です" },
