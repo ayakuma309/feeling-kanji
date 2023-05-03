@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-QHYLNDBL8X`}
       />
       <Script
         id="gtag-init"
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${gtag.GA_MEASUREMENT_ID}');
+          gtag('config', 'G-QHYLNDBL8X');
           `,
         }}
       />
