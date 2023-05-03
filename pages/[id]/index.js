@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 export const getServerSideProps = async (context) => {
   if (typeof context.params?.id === "string") {
@@ -48,10 +49,20 @@ const Page = ({ id }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h1>入力した文字: {id|| "未入力"}</h1>
+      <div className="container">
+        <div className="text">
+          <div className="text-content">{id|| "未入力"}</div>
         </div>
+        <Link href="/">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-3 rounded-full">
+            ツイートする
+          </button>
+        </Link>
+        <Link href="/">
+          <button className="bg-gray-300 hover:bg-gray-400 text-gray-800  font-bold py-2 px-4 rounded-full">
+            作り直す
+          </button>
+        </Link>
       </div>
     </>
   );
