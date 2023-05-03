@@ -9,21 +9,26 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <main>
+    <div className="container">
       <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+        className="shadow appearance-none border rounded w-80 py-5 px-5 text-gray-700 mb-10 leading-tight focus:outline-none focus:shadow-outline"
         id="title"
         type="text"
         placeholder="元明笑癒"
         onChange={inputTitle}
       />
-        {title?.trim() && (
-          <Link href={`/${title}`}>
+      <div className="text">
+        <div className="text-content">
+          <h1>{title}</h1>
+        </div>
+      </div>
+      {title?.trim() && (
+        <Link href={`/${title}`}>
+          <button className="bg-gray-300 hover:bg-gray-400 text-gray-800  font-bold py-5 px-5 rounded-full">
             OGPを作成する
-          </Link>
-        )}
-      </main>
+          </button>
+        </Link>
+      )}
     </div>
   );
 };
