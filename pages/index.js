@@ -32,7 +32,7 @@ const Home = () => {
         <meta
           property="og:image"
           key="ogImage"
-          content={`${baseUrl}/public/ogp.png`}
+          content={`${baseUrl}/ogp.png`}
         />
         <meta
           name="twitter:card"
@@ -44,7 +44,7 @@ const Home = () => {
         <meta
           name="twitter:image"
           key="twitterImage"
-          content={`${baseUrl}//public/ogp.png`}
+          content={`${baseUrl}/ogp.png`}
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
