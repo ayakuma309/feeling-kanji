@@ -61,3 +61,15 @@
   margin: 0 auto;
   border-radius: 100px;
 }
+
+@media (max-width: 768px) {
+  /* 768px以上用のスタイル */
+  .text{
+    width: 90%;
+    font-size: 40px;
+  }
+  .text-content{
+    padding: 30px;
+    line-height: 4.5;
+  }
+}
