@@ -61,7 +61,7 @@ const Home = () => {
         </TwitterShareButton>
       </h1>
       <p className="description">
-        友達や大切な人の印象を4文字の漢字にしてプレゼントしよう！
+        友達や大切な人の印象(感じ)を4文字の漢字にしてプレゼントしよう！
       </p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
