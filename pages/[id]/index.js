@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-
+import { TwitterShareButton } from "react-share";
 export const getServerSideProps = async (context) => {
   if (typeof context.params?.id === "string") {
     return {
@@ -42,6 +42,8 @@ const Page = ({ id }) => {
           key="twitterCard"
           content="summary_large_image"
         />
+        <meta name="twitter:site" content="@ZCunkuma" />
+        <meta name="twitter:creator" content="@ZCunkuma" />
         <meta
           name="twitter:image"
           key="twitterImage"
@@ -53,11 +55,17 @@ const Page = ({ id }) => {
         <div className="text">
           <div className="text-content">{id|| "未入力"}</div>
         </div>
-        <Link href="/">
+  
+        <TwitterShareButton
+          title="あの人の感じはどんな漢字"
+          hashtags={["あの人の感じはどんな漢字 #他己分析"]}
+          related={["ZCunkuma"]}
+          url={`https://feeling-kanji.vercel.app/${id}`}
+        >
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-3 rounded-full">
             ツイートする
           </button>
-        </Link>
+        </TwitterShareButton>
         <Link href="/">
           <button className="bg-gray-300 hover:bg-gray-400 text-gray-800  font-bold py-2 px-4 rounded-full">
             作り直す
