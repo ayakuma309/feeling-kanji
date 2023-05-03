@@ -59,7 +59,7 @@ const Page = ({ id }) => {
 
         <TwitterShareButton
           title="あの人の感じはどんな漢字"
-          hashtags={[" #あの人の感じはどんな漢字 #他己分析"]}
+          hashtags={["あの人の感じはどんな漢字", "他己分析"]}
           related={["ZCunkuma"]}
           url={encodedUrl}
         >
