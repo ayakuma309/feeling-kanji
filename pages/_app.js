@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import Script from "next/script";
-import * as gtag from "src/lib/gtag";
+import * as gtag from "../lib/gtag";
 import React from 'react';
 
 import { useRouter } from "next/router";
@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouterChange);
     };
   }, [router.events]);
-  
+
   return (
     <>
       <Script
