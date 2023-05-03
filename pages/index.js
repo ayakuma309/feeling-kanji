@@ -3,17 +3,9 @@ import Link from "next/link";
 
 const Home = () => {
   const [title, setTitle] = useState("");
-  const [meaning, setMeaning] = useState("");
-  const [description, setDescription] = useState("");
 
   const inputTitle = (e) => {
     setTitle(e.target.value);
-  };
-
-  const query = {
-    title: title,
-    meaning: meaning,
-    description: description
   };
 
   return (
@@ -27,7 +19,7 @@ const Home = () => {
         onChange={inputTitle}
       />
         {title?.trim() && (
-          <Link href={`/${text}`}>
+          <Link href={`/${title}`}>
             OGPを作成する
           </Link>
         )}
