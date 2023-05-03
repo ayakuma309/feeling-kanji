@@ -55,16 +55,16 @@ const Page = ({ id }) => {
         <div className="text">
           <div className="text-content">{id|| "未入力"}</div>
         </div>
-  
+
         <TwitterShareButton
           title="あの人の感じはどんな漢字"
           hashtags={["あの人の感じはどんな漢字 #他己分析"]}
           related={["ZCunkuma"]}
           url={`https://feeling-kanji.vercel.app/${id}`}
         >
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-3 rounded-full">
+          <p className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-3 rounded-full">
             ツイートする
-          </button>
+          </p>
         </TwitterShareButton>
         <Link href="/">
           <button className="bg-gray-300 hover:bg-gray-400 text-gray-800  font-bold py-2 px-4 rounded-full">
