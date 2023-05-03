@@ -18,6 +18,7 @@ export const getServerSideProps = async (context) => {
 
 const Page = ({ id }) => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "";
+  const encodedUrl = encodeURI(`${baseUrl}/${id}`);
   return (
     <>
       <Head>
@@ -58,9 +59,9 @@ const Page = ({ id }) => {
 
         <TwitterShareButton
           title="あの人の感じはどんな漢字"
-          hashtags={["あの人の感じはどんな漢字 #他己分析"]}
+          hashtags={[" #あの人の感じはどんな漢字 #他己分析"]}
           related={["ZCunkuma"]}
-          url={`https://feeling-kanji.vercel.app/${id}`}
+          url={encodedUrl}
         >
           <p className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-3 rounded-full">
             ツイートする
