@@ -36,7 +36,7 @@ const Home = () => {
           作成
         </button>
         {errors.title && (
-          <p className="error eroor-add">{errors.title.message}</p>
+          <p className="error error-add">{errors.title.message}</p>
           ) }
       </form>
       <div className="text">
