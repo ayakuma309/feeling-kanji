@@ -14,6 +14,7 @@ const Home = () => {
   const onSubmit = (data) => setTitle(data.title);
   return (
     <div className="container">
+      <h1 className="heading">あの人の感じはどんな漢字</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
@@ -29,13 +30,13 @@ const Home = () => {
             message: '漢字のみ入力してください。',
           },
           })}
-          className="shadow appearance-none border rounded w-80 py-5 px-5 text-gray-700 mb-10 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-80 py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-5 px-5 rounded-full">
           作成
         </button>
         {errors.title && (
-          <p className="error">{errors.title.message}</p>
+          <p className="error eroor-add">{errors.title.message}</p>
           ) }
       </form>
       <div className="text">
