@@ -9,8 +9,7 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <main>
+    <div className="container">
       <input
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
         id="title"
@@ -18,12 +17,12 @@ const Home = () => {
         placeholder="元明笑癒"
         onChange={inputTitle}
       />
-        {title?.trim() && (
-          <Link href={`/${title}`}>
-            OGPを作成する
-          </Link>
-        )}
-      </main>
+      <div className="text">{title}</div>
+      {title?.trim() && (
+        <Link href={`/${title}`}>
+          OGPを作成する
+        </Link>
+      )}
     </div>
   );
 };

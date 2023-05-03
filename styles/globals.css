@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #413d3d;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 60px;
+}
