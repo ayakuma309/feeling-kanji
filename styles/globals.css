@@ -9,6 +9,10 @@
   font-family: sans-serif;
   font-weight: bold;
   font-size: 40px;
+  margin-bottom: 10px;
+}
+.description{
+  font-weight: bold;
   margin-bottom: 30px;
 }
 
@@ -48,7 +52,7 @@
   line-height: 1.5;
   background-color:aliceblue
 }
-.eroor-add{
+.error-add{
   color: red;
   margin: 20px 0;
 }

@@ -15,6 +15,9 @@ const Home = () => {
   return (
     <div className="container">
       <h1 className="heading">あの人の感じはどんな漢字</h1>
+      <p className="description">
+        友達や大切な人の印象を4文字の漢字にしてプレゼントしよう！
+      </p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
@@ -26,7 +29,7 @@ const Home = () => {
           maxLength: { value: 4, message: "4文字で入力してください" },
           minLength: { value: 4, message: "4文字で入力してください" },
           pattern: {
-            value: /([\u{3005}\u{3007}\u{303b}\u{3400}-\u{9FFF}\u{F900}-\u{FAFF}\u{20000}-\u{2FFFF}][\u{E0100}-\u{E01EF}\u{FE00}-\u{FE02}]?)/mu,
+            value: /^[\u4e00-\u9faf]+$/,
             message: '漢字のみ入力してください。',
           },
           })}
@@ -36,7 +39,7 @@ const Home = () => {
           作成
         </button>
         {errors.title && (
-          <p className="error eroor-add">{errors.title.message}</p>
+          <p className="error error-add">{errors.title.message}</p>
           ) }
       </form>
       <div className="text">
