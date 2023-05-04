@@ -58,10 +58,13 @@ const Page = ({ id }) => {
           <div className="text-content">{id|| "未入力"}</div>
         </div>
         <form>
-          <label>誰に送りたいですか?(自分でも)</label><br/>
+          <label>
+            誰に送りたいですか?<br/>
+            メンションつけると届くかも(空欄でもツィートできます!)
+          </label><br/>
           <input
             type="text"
-            placeholder="〇〇さんへ"
+            placeholder="@＋ユーザー名"
             onChange={(e) => setToWhom(e.target.value)}
             className="shadow appearance-none border rounded  md:w-80 py-5 px-5 my-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
