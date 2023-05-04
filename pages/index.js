@@ -61,7 +61,10 @@ const Home = () => {
         </TwitterShareButton>
       </h1>
       <p className="description">
-        友達や大切な人の印象(感じ)を4文字の漢字にしてプレゼントしよう！
+        友達や大切な人の印象(感じ)を4文字の漢字にしてプレゼントしよう！<br/>
+        ※ちゅうい<br />
+        1.自分がもらって嫌な漢字は送らないこと<br />
+        2.対応してない漢字もあるので文字化けする可能性があります....
       </p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
