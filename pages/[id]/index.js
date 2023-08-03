@@ -75,9 +75,11 @@ const Page = ({ id }) => {
           related={["ZCunkuma"]}
           url={encodedUrl}
         >
-          <p className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-3 rounded-full">
-            ツイートする
-          </p>
+          <div
+            className="text-white font-bold rounded-full mr-5 bg-black py-1 px-2 mb-2"
+          >
+            \uD835\uDD4F
+          </div>
         </TwitterShareButton>
         <Link href="/">
           <button className="bg-gray-300 hover:bg-gray-400 text-gray-800  font-bold py-2 px-4 rounded-full">

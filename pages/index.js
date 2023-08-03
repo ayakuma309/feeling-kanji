@@ -57,7 +57,11 @@ const Home = () => {
           related={["ZCunkuma"]}
           url="https://feeling-kanji.vercel.app/"
         >
-          <TwitterIcon  className="share-button"/>
+          <div
+            className="text-white font-bold rounded-full mr-5 bg-black px-2 mb-2"
+          >
+            \uD835\uDD4F
+          </div>
         </TwitterShareButton>
       </h1>
       <p className="description">
